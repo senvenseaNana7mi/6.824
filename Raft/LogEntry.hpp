@@ -11,5 +11,3 @@ class LogEntry
     string command_;
     int term_;
 };
-
-hyw change
