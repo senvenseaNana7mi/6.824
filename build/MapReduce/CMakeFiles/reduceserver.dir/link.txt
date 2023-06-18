@@ -1,0 +1,1 @@
+/usr/bin/g++  -g  -rdynamic CMakeFiles/reduceserver.dir/Reduce.cpp.o CMakeFiles/reduceserver.dir/Reduceexam.cpp.o  -o ../../MapReduce/bin/reduceserver  -lzmq 

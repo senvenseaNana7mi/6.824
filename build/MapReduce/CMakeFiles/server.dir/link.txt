@@ -1,0 +1,1 @@
+/usr/bin/g++  -g  -rdynamic CMakeFiles/server.dir/main_server.cpp.o  -o ../../MapReduce/bin/server  -lzmq -lpthread 

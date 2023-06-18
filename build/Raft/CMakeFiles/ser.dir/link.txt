@@ -1,0 +1,1 @@
+/usr/bin/g++  -g  -rdynamic CMakeFiles/ser.dir/testbtt_ser.cpp.o  -o ../../Raft/bin/ser  -lzmq 

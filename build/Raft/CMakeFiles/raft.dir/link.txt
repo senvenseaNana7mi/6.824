@@ -1,0 +1,1 @@
+/usr/bin/g++  -g  -rdynamic CMakeFiles/raft.dir/raft.cpp.o CMakeFiles/raft.dir/rafttest.cpp.o CMakeFiles/raft.dir/__/logger.cpp.o  -o ../../Raft/bin/raft  -lzmq -lpthread 

@@ -1,0 +1,1 @@
+/usr/bin/g++  -g  -rdynamic CMakeFiles/cli.dir/testbtt_cli.cpp.o  -o ../../Raft/bin/cli  -lzmq 

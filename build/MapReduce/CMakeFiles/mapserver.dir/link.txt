@@ -1,0 +1,1 @@
+/usr/bin/g++  -g  -rdynamic CMakeFiles/mapserver.dir/Map.cpp.o CMakeFiles/mapserver.dir/Mapexam.cpp.o  -o ../../MapReduce/bin/mapserver  -lzmq 

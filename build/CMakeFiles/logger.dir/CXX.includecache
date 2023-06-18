@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/hyw/project/6.824/logger.cpp
+logger.hpp
+/home/hyw/project/6.824/logger.hpp
+condition_variable
+-
+cstddef
+-
+cstdlib
+-
+iostream
+-
+memory
+-
+mutex
+-
+time.h
+-
+
+/home/hyw/project/6.824/logger.hpp
+bits/types/FILE.h
+-
+condition_variable
+-
+cstdio
+-
+iostream
+-
+memory
+-
+mutex
+-
+queue
+-
+string
+-
+thread
+-
+
