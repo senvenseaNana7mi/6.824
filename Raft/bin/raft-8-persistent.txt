@@ -1,19 +1,20 @@
-term:7
-votefor:6
-logTerm:2
-logcontent: 2023-6-18 17:33:57 : this is log for raft num0logTerm:2
-logcontent: 2023-6-18 17:33:59 : this is log for raft num0logTerm:2
-logcontent: 2023-6-18 17:34:1 : this is log for raft num0logTerm:2
-logcontent: 2023-6-18 17:34:3 : this is log for raft num0logTerm:2
-logcontent: 2023-6-18 17:34:5 : this is log for raft num0logTerm:2
-logcontent: 2023-6-18 17:34:7 : this is log for raft num0logTerm:2
-logcontent: 2023-6-18 17:34:9 : this is log for raft num0logTerm:2
-logcontent: 2023-6-18 17:34:11 : this is log for raft num0logTerm:2
-logcontent: 2023-6-18 17:34:13 : this is log for raft num0logTerm:2
-logcontent: 2023-6-18 17:34:15 : this is log for raft num0logTerm:3
-logcontent: 2023-6-18 17:34:23 : this is log for raft num6logTerm:3
-logcontent: 2023-6-18 17:34:25 : this is log for raft num6logTerm:3
-logcontent: 2023-6-18 17:34:27 : this is log for raft num6logTerm:3
+term:1
+votefor:9
+
+logTerm:1
+logcontent: 2023-6-18 21:5:47 : this is log for raft num8logTerm:1
+logcontent: 2023-6-18 21:5:49 : this is log for raft num8logTerm:1
+logcontent: 2023-6-18 21:5:51 : this is log for raft num8logTerm:1
+logcontent: 2023-6-18 21:6:15 : this is log for raft num8logTerm:4
+logcontent: 2023-6-18 21:7:15 : this is log for raft num8logTerm:4
+logcontent: 2023-6-18 21:7:18 : this is log for raft num8logTerm:4
+logcontent: 2023-6-18 21:7:22 : this is log for raft num8logTerm:4
+logcontent: 2023-6-18 21:7:31 : this is log for raft num8logTerm:4
+logcontent: 2023-6-18 21:7:39 : this is log for raft num8logTerm:7
+logcontent: 2023-6-18 21:7:54 : this is log for raft num8logTerm:7
+logcontent: 2023-6-18 21:8:0 : this is log for raft num8logTerm:7
+logcontent: 2023-6-18 21:8:2 : this is log for raft num8logTerm:7
+logcontent: 2023-6-18 21:8:5 : this is log for raft num8 raft num6logTerm:3
 logcontent: 2023-6-18 17:34:29 : this is log for raft num6logTerm:3
 logcontent: 2023-6-18 17:34:31 : this is log for raft num6logTerm:3
 logcontent: 2023-6-18 17:34:33 : this is log for raft num6logTerm:3

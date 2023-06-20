@@ -71,8 +71,6 @@ clean: Raft/clean
 # Directory level rules for directory Raft
 
 # Recursive "all" directory target.
-Raft/all: Raft/CMakeFiles/ser.dir/all
-Raft/all: Raft/CMakeFiles/cli.dir/all
 Raft/all: Raft/CMakeFiles/raft.dir/all
 
 .PHONY : Raft/all
@@ -83,65 +81,9 @@ Raft/preinstall:
 .PHONY : Raft/preinstall
 
 # Recursive "clean" directory target.
-Raft/clean: Raft/CMakeFiles/ser.dir/clean
-Raft/clean: Raft/CMakeFiles/cli.dir/clean
 Raft/clean: Raft/CMakeFiles/raft.dir/clean
 
 .PHONY : Raft/clean
-
-#=============================================================================
-# Target rules for target Raft/CMakeFiles/ser.dir
-
-# All Build rule for target.
-Raft/CMakeFiles/ser.dir/all:
-	$(MAKE) -f Raft/CMakeFiles/ser.dir/build.make Raft/CMakeFiles/ser.dir/depend
-	$(MAKE) -f Raft/CMakeFiles/ser.dir/build.make Raft/CMakeFiles/ser.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hyw/project/6.824/build/CMakeFiles --progress-num=7,8 "Built target ser"
-.PHONY : Raft/CMakeFiles/ser.dir/all
-
-# Build rule for subdir invocation for target.
-Raft/CMakeFiles/ser.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hyw/project/6.824/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 Raft/CMakeFiles/ser.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hyw/project/6.824/build/CMakeFiles 0
-.PHONY : Raft/CMakeFiles/ser.dir/rule
-
-# Convenience name for target.
-ser: Raft/CMakeFiles/ser.dir/rule
-
-.PHONY : ser
-
-# clean rule for target.
-Raft/CMakeFiles/ser.dir/clean:
-	$(MAKE) -f Raft/CMakeFiles/ser.dir/build.make Raft/CMakeFiles/ser.dir/clean
-.PHONY : Raft/CMakeFiles/ser.dir/clean
-
-#=============================================================================
-# Target rules for target Raft/CMakeFiles/cli.dir
-
-# All Build rule for target.
-Raft/CMakeFiles/cli.dir/all:
-	$(MAKE) -f Raft/CMakeFiles/cli.dir/build.make Raft/CMakeFiles/cli.dir/depend
-	$(MAKE) -f Raft/CMakeFiles/cli.dir/build.make Raft/CMakeFiles/cli.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hyw/project/6.824/build/CMakeFiles --progress-num=1,2 "Built target cli"
-.PHONY : Raft/CMakeFiles/cli.dir/all
-
-# Build rule for subdir invocation for target.
-Raft/CMakeFiles/cli.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hyw/project/6.824/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 Raft/CMakeFiles/cli.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hyw/project/6.824/build/CMakeFiles 0
-.PHONY : Raft/CMakeFiles/cli.dir/rule
-
-# Convenience name for target.
-cli: Raft/CMakeFiles/cli.dir/rule
-
-.PHONY : cli
-
-# clean rule for target.
-Raft/CMakeFiles/cli.dir/clean:
-	$(MAKE) -f Raft/CMakeFiles/cli.dir/build.make Raft/CMakeFiles/cli.dir/clean
-.PHONY : Raft/CMakeFiles/cli.dir/clean
 
 #=============================================================================
 # Target rules for target Raft/CMakeFiles/raft.dir
@@ -150,7 +92,7 @@ Raft/CMakeFiles/cli.dir/clean:
 Raft/CMakeFiles/raft.dir/all:
 	$(MAKE) -f Raft/CMakeFiles/raft.dir/build.make Raft/CMakeFiles/raft.dir/depend
 	$(MAKE) -f Raft/CMakeFiles/raft.dir/build.make Raft/CMakeFiles/raft.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hyw/project/6.824/build/CMakeFiles --progress-num=3,4,5,6 "Built target raft"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hyw/project/6.824/build/CMakeFiles --progress-num=1,2,3,4 "Built target raft"
 .PHONY : Raft/CMakeFiles/raft.dir/all
 
 # Build rule for subdir invocation for target.

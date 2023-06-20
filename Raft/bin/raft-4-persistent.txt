@@ -1,15 +1,16 @@
-term:7
-votefor:4
-logTerm:2
-logcontent: 2023-6-18 17:33:57 : this is log for raft num0logTerm:2
-logcontent: 2023-6-18 17:33:59 : this is log for raft num0logTerm:2
-logcontent: 2023-6-18 17:34:1 : this is log for raft num0logTerm:2
-logcontent: 2023-6-18 17:34:3 : this is log for raft num0logTerm:2
-logcontent: 2023-6-18 17:34:5 : this is log for raft num0logTerm:2
-logcontent: 2023-6-18 17:34:7 : this is log for raft num0logTerm:2
-logcontent: 2023-6-18 17:34:9 : this is log for raft num0logTerm:2
-logcontent: 2023-6-18 17:34:11 : this is log for raft num0logTerm:2
-logcontent: 2023-6-18 17:34:13 : this is log for raft num0logTerm:2
+term:1
+votefor:9
+
+ogTerm:1
+logcontent: 2023-6-18 21:5:47 : this is log for raft num8logTerm:1
+logcontent: 2023-6-18 21:5:49 : this is log for raft num8logTerm:1
+logcontent: 2023-6-18 21:5:51 : this is log for raft num8num3logTerm:1
+logcontent: 2023-6-18 20:42:42 : this is log for raft num3logTerm:1
+logcontent: 2023-6-18 20:42:44 : this is log for raft num3logTerm:1
+logcontent: 2023-6-18 20:42:46 : this is log for raft num3logTerm:1
+logcontent: 2023-6-18 20:42:48 : this is log for raft num3logTerm:1
+logcontent: 2023-6-18 20:42:50 : this is log for raft num3logTerm:1
+logcontent: 2023-6-18 20:42:52 : this is log for raft num3m:2
 logcontent: 2023-6-18 17:34:15 : this is log for raft num0logTerm:3
 logcontent: 2023-6-18 17:34:23 : this is log for raft num6logTerm:3
 logcontent: 2023-6-18 17:34:25 : this is log for raft num6logTerm:3

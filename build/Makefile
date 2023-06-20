@@ -111,32 +111,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named ser
-
-# Build rule for target.
-ser: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ser
-.PHONY : ser
-
-# fast build rule for target.
-ser/fast:
-	$(MAKE) -f Raft/CMakeFiles/ser.dir/build.make Raft/CMakeFiles/ser.dir/build
-.PHONY : ser/fast
-
-#=============================================================================
-# Target rules for targets named cli
-
-# Build rule for target.
-cli: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 cli
-.PHONY : cli
-
-# fast build rule for target.
-cli/fast:
-	$(MAKE) -f Raft/CMakeFiles/cli.dir/build.make Raft/CMakeFiles/cli.dir/build
-.PHONY : cli/fast
-
-#=============================================================================
 # Target rules for targets named raft
 
 # Build rule for target.
@@ -157,8 +131,6 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... ser"
-	@echo "... cli"
 	@echo "... raft"
 .PHONY : help
 

@@ -1,16 +1,6 @@
 [
 {
   "directory": "/home/hyw/project/6.824/build/Raft",
-  "command": "/usr/bin/g++   -I/home/hyw/project/6.824/buttonrpc-master -I/home/hyw/project/6.824  -g   -o CMakeFiles/ser.dir/testbtt_ser.cpp.o -c /home/hyw/project/6.824/Raft/testbtt_ser.cpp",
-  "file": "/home/hyw/project/6.824/Raft/testbtt_ser.cpp"
-},
-{
-  "directory": "/home/hyw/project/6.824/build/Raft",
-  "command": "/usr/bin/g++   -I/home/hyw/project/6.824/buttonrpc-master -I/home/hyw/project/6.824  -g   -o CMakeFiles/cli.dir/testbtt_cli.cpp.o -c /home/hyw/project/6.824/Raft/testbtt_cli.cpp",
-  "file": "/home/hyw/project/6.824/Raft/testbtt_cli.cpp"
-},
-{
-  "directory": "/home/hyw/project/6.824/build/Raft",
   "command": "/usr/bin/g++   -I/home/hyw/project/6.824/buttonrpc-master -I/home/hyw/project/6.824  -g   -o CMakeFiles/raft.dir/raft.cpp.o -c /home/hyw/project/6.824/Raft/raft.cpp",
   "file": "/home/hyw/project/6.824/Raft/raft.cpp"
 },

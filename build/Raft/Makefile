@@ -111,36 +111,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-Raft/CMakeFiles/ser.dir/rule:
-	cd /home/hyw/project/6.824/build && $(MAKE) -f CMakeFiles/Makefile2 Raft/CMakeFiles/ser.dir/rule
-.PHONY : Raft/CMakeFiles/ser.dir/rule
-
-# Convenience name for target.
-ser: Raft/CMakeFiles/ser.dir/rule
-
-.PHONY : ser
-
-# fast build rule for target.
-ser/fast:
-	cd /home/hyw/project/6.824/build && $(MAKE) -f Raft/CMakeFiles/ser.dir/build.make Raft/CMakeFiles/ser.dir/build
-.PHONY : ser/fast
-
-# Convenience name for target.
-Raft/CMakeFiles/cli.dir/rule:
-	cd /home/hyw/project/6.824/build && $(MAKE) -f CMakeFiles/Makefile2 Raft/CMakeFiles/cli.dir/rule
-.PHONY : Raft/CMakeFiles/cli.dir/rule
-
-# Convenience name for target.
-cli: Raft/CMakeFiles/cli.dir/rule
-
-.PHONY : cli
-
-# fast build rule for target.
-cli/fast:
-	cd /home/hyw/project/6.824/build && $(MAKE) -f Raft/CMakeFiles/cli.dir/build.make Raft/CMakeFiles/cli.dir/build
-.PHONY : cli/fast
-
-# Convenience name for target.
 Raft/CMakeFiles/raft.dir/rule:
 	cd /home/hyw/project/6.824/build && $(MAKE) -f CMakeFiles/Makefile2 Raft/CMakeFiles/raft.dir/rule
 .PHONY : Raft/CMakeFiles/raft.dir/rule
@@ -236,60 +206,6 @@ rafttest.cpp.s:
 	cd /home/hyw/project/6.824/build && $(MAKE) -f Raft/CMakeFiles/raft.dir/build.make Raft/CMakeFiles/raft.dir/rafttest.cpp.s
 .PHONY : rafttest.cpp.s
 
-testbtt_cli.o: testbtt_cli.cpp.o
-
-.PHONY : testbtt_cli.o
-
-# target to build an object file
-testbtt_cli.cpp.o:
-	cd /home/hyw/project/6.824/build && $(MAKE) -f Raft/CMakeFiles/cli.dir/build.make Raft/CMakeFiles/cli.dir/testbtt_cli.cpp.o
-.PHONY : testbtt_cli.cpp.o
-
-testbtt_cli.i: testbtt_cli.cpp.i
-
-.PHONY : testbtt_cli.i
-
-# target to preprocess a source file
-testbtt_cli.cpp.i:
-	cd /home/hyw/project/6.824/build && $(MAKE) -f Raft/CMakeFiles/cli.dir/build.make Raft/CMakeFiles/cli.dir/testbtt_cli.cpp.i
-.PHONY : testbtt_cli.cpp.i
-
-testbtt_cli.s: testbtt_cli.cpp.s
-
-.PHONY : testbtt_cli.s
-
-# target to generate assembly for a file
-testbtt_cli.cpp.s:
-	cd /home/hyw/project/6.824/build && $(MAKE) -f Raft/CMakeFiles/cli.dir/build.make Raft/CMakeFiles/cli.dir/testbtt_cli.cpp.s
-.PHONY : testbtt_cli.cpp.s
-
-testbtt_ser.o: testbtt_ser.cpp.o
-
-.PHONY : testbtt_ser.o
-
-# target to build an object file
-testbtt_ser.cpp.o:
-	cd /home/hyw/project/6.824/build && $(MAKE) -f Raft/CMakeFiles/ser.dir/build.make Raft/CMakeFiles/ser.dir/testbtt_ser.cpp.o
-.PHONY : testbtt_ser.cpp.o
-
-testbtt_ser.i: testbtt_ser.cpp.i
-
-.PHONY : testbtt_ser.i
-
-# target to preprocess a source file
-testbtt_ser.cpp.i:
-	cd /home/hyw/project/6.824/build && $(MAKE) -f Raft/CMakeFiles/ser.dir/build.make Raft/CMakeFiles/ser.dir/testbtt_ser.cpp.i
-.PHONY : testbtt_ser.cpp.i
-
-testbtt_ser.s: testbtt_ser.cpp.s
-
-.PHONY : testbtt_ser.s
-
-# target to generate assembly for a file
-testbtt_ser.cpp.s:
-	cd /home/hyw/project/6.824/build && $(MAKE) -f Raft/CMakeFiles/ser.dir/build.make Raft/CMakeFiles/ser.dir/testbtt_ser.cpp.s
-.PHONY : testbtt_ser.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -298,8 +214,6 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... ser"
-	@echo "... cli"
 	@echo "... raft"
 	@echo "... __/logger.o"
 	@echo "... __/logger.i"
@@ -310,12 +224,6 @@ help:
 	@echo "... rafttest.o"
 	@echo "... rafttest.i"
 	@echo "... rafttest.s"
-	@echo "... testbtt_cli.o"
-	@echo "... testbtt_cli.i"
-	@echo "... testbtt_cli.s"
-	@echo "... testbtt_ser.o"
-	@echo "... testbtt_ser.i"
-	@echo "... testbtt_ser.s"
 .PHONY : help
 
 

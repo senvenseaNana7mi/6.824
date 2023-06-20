@@ -47,7 +47,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "Raft/CMakeFiles/ser.dir/DependInfo.cmake"
-  "Raft/CMakeFiles/cli.dir/DependInfo.cmake"
   "Raft/CMakeFiles/raft.dir/DependInfo.cmake"
   )
