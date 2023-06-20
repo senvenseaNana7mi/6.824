@@ -94,11 +94,12 @@ class AppendEntriesRequest
     int PrevLogTerm;
     string logs;
     int leaderCommit;
+    int logterm;
 
     friend Serializer &operator>>(Serializer &in, AppendEntriesRequest &request)
     {
         in >> request.term >> request.leaderId >> request.PrevLogIndex >>
-            request.PrevLogTerm >>request.logs >> request.leaderCommit;
+            request.PrevLogTerm >>request.logs >> request.leaderCommit >> request.logterm;
         return in;
     }
 
@@ -106,7 +107,7 @@ class AppendEntriesRequest
                                   AppendEntriesRequest &request)
     {
         out << request.term << request.leaderId << request.PrevLogIndex
-            << request.PrevLogTerm << request.logs << request.leaderCommit ;
+            << request.PrevLogTerm << request.logs << request.leaderCommit << request.logterm;
         return out;
     }
 };

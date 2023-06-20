@@ -11,9 +11,3 @@ add_executable(raft ${RAFT_LIST})
 link_libraries(${PROJECT_SOURCE_DIR}/lib)
 target_link_libraries(raft zmq pthread)
 
-#测试
-add_executable(cli testbtt_cli.cpp)
-target_link_libraries(cli zmq)
-
-add_executable(ser testbtt_ser.cpp)
-target_link_libraries(ser zmq)

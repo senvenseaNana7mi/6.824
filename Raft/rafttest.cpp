@@ -38,7 +38,11 @@ int main(int argc, char *argv[])
     {
         raft[i].Init(peers, i);
     }
-
+    Raft* rv[peers.size()];
+    for(int i = 0;i<peers.size();++i)
+    {
+        rv[i]=&raft[i];
+    }
     while (true)
     {
         sleep(2);

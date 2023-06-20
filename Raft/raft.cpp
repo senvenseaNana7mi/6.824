@@ -19,7 +19,6 @@
 #include <thread>
 #include <unistd.h>
 
-
 // 任期时间 单位s
 #define TERMDURING 10
 
@@ -27,7 +26,7 @@
 #define TIMEOUT 5
 
 // 心跳时间 单位s
-#define HEARTTIME 1
+#define HEARTTIME 100000
 
 // rpc的重传次数
 #define RETRYNUM 4
@@ -153,12 +152,6 @@ void Raft::electionLoop(Raft *raft)
     {
         // 定义timeout，单位ms
         int timeOut = rand() % TIMEOUT + TIMEOUT;
-        if(raft->isfirst)
-        {
-            timeOut = rand() % 5 + 5;
-            raft->isfirst = false;
-        }
-        
         // 进入一轮选举
         while (true)
         {
@@ -276,7 +269,7 @@ RequestVoteResponse Raft::replyVote(RequestVoteRequest request)
     }
 
     currentTerm_ = request.term;
-    
+
     bool ret = isNewLog(request);
 
     // 通过检查
@@ -463,6 +456,7 @@ void Raft::SendAppendEntrie(Raft *raft, int id)
             request.PrevLogIndex = logsize;
             request.PrevLogTerm = logterm;
             request.logs = "1";
+            request.logterm = 0;
             printINFO(
                 "num%d raft is leader, send heart to num%d raft, term is %d",
                 raft->m_id_, id, raft->currentTerm_);
@@ -476,8 +470,7 @@ void Raft::SendAppendEntrie(Raft *raft, int id)
                 request.PrevLogIndex = needIndex - 1;
                 request.PrevLogTerm = raft->log_[needIndex - 2].term_;
             }
-            // 有日志的话term就是发送那个日志的term
-            request.term = raft->log_[needIndex - 1].term_;
+            request.logterm = raft->log_[needIndex -1].term_;
             request.logs = raft->log_[needIndex - 1].command_;
             printINFO("num%d raft is leader, send log to num%d raft, term is "
                       "%d, log index is %d",
@@ -532,7 +525,10 @@ void Raft::SendAppendEntrie(Raft *raft, int id)
             else
             {
                 // 逐步减小发送的日志下表，并且重新发送
-                raft->nextIndex_[id]--;
+                if (raft->nextIndex_[id] > 1)
+                {
+                    raft->nextIndex_[id]--;
+                }
             }
         }
     }
@@ -542,16 +538,30 @@ void Raft::SendAppendEntrie(Raft *raft, int id)
 // 日志复制的回复，follow才回复
 AppendEntriesResponse Raft::replyAppend(AppendEntriesRequest request)
 {
+
     AppendEntriesResponse response;
     response.success = false;
     response.term = currentTerm_;
+    /*
+        一下代码为模拟日志丢失的场景，在特定情况下将接收失败
+    */
+    // 这种情况不接收!
+    int n = rand() % 10;
+    // 模拟1/10的概率不接受日志
+    if (n == 1)
+    {
+        printINFO("because of the network problem, num%d raft not recv log "
+                  "from num%d, index is %d",
+                  m_id_, request.leaderId, request.PrevLogIndex + 1);
+        return response;
+    }
 
     // 如果遇到的不是leader的直接丢掉
-    if (request.term < currentTerm_ )
+    if (request.term < currentTerm_)
     {
         printINFO("num%d raft reject log from num%d, index is %d", m_id_,
-                      request.leaderId, request.PrevLogIndex + 1);
-        
+                  request.leaderId, request.PrevLogIndex + 1);
+
         return response;
     }
     {
@@ -583,7 +593,7 @@ AppendEntriesResponse Raft::replyAppend(AppendEntriesRequest request)
     {
         // 判断是否接收日志
         int index = request.PrevLogIndex, term = request.PrevLogTerm;
-        // 判断能接收日志不，要判断没有日志的边界清康
+        // 判断能接收日志不，要判断没有日志的边界情况
         if (log_.size() >= index &&
             (index == 0 || log_[index - 1].term_ == term))
         {
@@ -601,7 +611,7 @@ AppendEntriesResponse Raft::replyAppend(AppendEntriesRequest request)
             else
             {
                 log_[index].command_ = request.logs;
-                log_[index].term_ = request.term;
+                log_[index].term_ = request.logterm;
             }
             // 最后处理commit
             if (request.leaderCommit > commitIndex_)
